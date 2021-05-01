@@ -7,33 +7,23 @@ var form,player,game;
 
 
 function setup() {
-  createCanvas(800,400);
+  createCanvas(windowWidth - 50,windowHeight - 50);
 
   database = firebase.database();
 
   form = new Form();
    
-    player = new Player();
+  player = new Player();
     
   
 }
 
 function draw() {
-  background(255); 
+  background(128); 
   
   
   form.display();
 
   player.getCount();
 
-}
-
-function ValidateEmail() 
-{
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
-  {
-    return (true)
-  }
-    alert("You have entered an invalid email address!")
-    return (false)
 }

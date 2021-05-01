@@ -11,10 +11,11 @@ constructor(){
 getCount(){
 
    database.ref('VoterCount').on("value",(data)=> { count = data.val(); } ) ;
-}
+  }
+  
 updateCount(count){
 
-  database.ref('/').update( { count:count } );
+  database.ref('/').update( { VoterCount:count } );
 
 }
 
